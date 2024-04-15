@@ -1,6 +1,8 @@
 package com.example.mspedido.entity;
 
 
+import com.example.mspedido.dto.ClienteDto;
+import com.example.mspedido.dto.ProductoDto;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -14,9 +16,16 @@ public class Pedidodetalle {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nombreproducto;
-    private int cantidad;
-    private BigDecimal precio;
+    private Double cantidad;
+    private Double precio;
+    private Integer productoid;
+    
 
-    @ManyToOne
-    private Pedidos pedidos;
+    @Transient
+    private ProductoDto productoDto;
+    public Pedidodetalle() {
+        this.cantidad = (double) 0;
+        this.precio = (double) 0;
+    }
+
 }
