@@ -34,6 +34,6 @@ spring:
         - id: mspedido-service
           uri: lb://mspedido-service
           predicates:
-            - Path=/pedidos/**
+            - Path=/pedidos/** ,/pedidodetalle/**
 
 
