@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface ClienteFeign {
     @GetMapping("/{id}")
     @CircuitBreaker(name = "clientesListarPorIdCB", fallbackMethod = "fallBackCliente")
-    public ResponseEntity<ClienteDto> listById(@PathVariable(required = true) Integer id);
+    public ResponseEntity<ClienteDto> insertPorld(@PathVariable(required = true) Integer id);
     default ResponseEntity<ClienteDto> fallBackCliente(Integer id, Exception e) {
 
         return ResponseEntity.ok(new ClienteDto());
