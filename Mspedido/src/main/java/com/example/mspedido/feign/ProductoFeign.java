@@ -11,3 +11,21 @@ public interface ProductoFeign {
     @GetMapping("/{id}")
     public ResponseEntity<ProductoDto> BuscarPorId(@PathVariable(required = true) Integer id);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
