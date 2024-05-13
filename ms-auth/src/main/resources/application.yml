@@ -7,5 +7,3 @@ spring:
     import: optional:configserver:http://root:s3cr3t@localhost:7070
 
 
-jwt:
-  secret: secret
