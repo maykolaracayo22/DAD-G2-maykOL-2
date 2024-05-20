@@ -30,8 +30,6 @@ spring:
           filters:
             - AuthFilter
 
-
-
         - id: mscliente-service
           uri: lb://mscliente-service
           predicates:
