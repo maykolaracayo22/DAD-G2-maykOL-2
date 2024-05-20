@@ -42,4 +42,10 @@ spring:
           predicates:
             - Path=/pedidos/** ,/pedidodetalle/**
 
+        - id: msauth-service
+          uri: lb://msauth-service
+          predicates:
+            - Path=/auth/**
+
+
 
